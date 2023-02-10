@@ -71,4 +71,7 @@ module.exports = {
 `mode`支持`production`、`development`、`none`三个值，默认为`production`，Webpack通过mode来为内部函数开启特定的参数（**process.env.NODE_ENV**），并开启相应的默认插件。比如：development下的NameChunksPlugin、production下的FlagDependencyUsagePlugin等。
 
 
-## JavaScript模块系统
+
+
+
+
