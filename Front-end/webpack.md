@@ -77,3 +77,16 @@ module.exports = {
 - Bundle Server会提供文件在浏览器中的访问
 - HMR Server负责将文件的更新输出给HMR Runtime
 - 在开发时，一个HMR Runtime代码会被注入到生成的bundle.js文件中，用于与HMR Server建立WebSocket连接，更新文件的变化
+
+### 文件指纹
+文件指纹可以用来做版本管理，优化缓存加速访问。
+Webpack有三种文件指纹:
+- hash：项目文件有修改就会重新做hash
+- chunk hash：不同的entry生成不同的chunk hash
+- content hash：根据文件内容定义hash，文件内容不变，hash不变，如css文件
+
+### 代码压缩
+Javascript：Webpack内置uglifyjs-webpack-plugin，提供对JS文件的压缩。
+CSS: 对于webpack 5 可以使用CssMinimizerPlugin。
+HTML：可以使用HtmlWebpackPlugin。
+
